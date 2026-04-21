@@ -1,22 +1,20 @@
-name: Format
-
 on:
   pull_request:
   push:
     branches: [main]
 
-permissions: {}
-
 jobs:
-  format:
+  code-quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v5
       - uses: actions/setup-node@v6
         with:
           node-version: lts/*
           cache: pnpm
-
+      - uses: pnpm/action-setup@v5
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run fmt:check
+      - name: Lint
+        run: pnpm run lint
+      - name: Format
+        run: pnpm run fmt:check
