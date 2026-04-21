@@ -1,0 +1,5 @@
+# Dependencies
+node_modules/
+
+# TanStack Start & TanStack Router
+src/routeTree.gen.ts
