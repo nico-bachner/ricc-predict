@@ -4,7 +4,9 @@
     "dev": "vite dev",
     "build": "vite build",
     "lint": "oxlint",
-    "fmt": "oxfmt"
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.168.23",
