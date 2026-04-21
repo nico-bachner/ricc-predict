@@ -8,7 +8,7 @@ import {
 import type { ReactNode } from 'react'
 
 const RootDocument = ({ children }: Readonly<{ children: ReactNode }>) => (
-  <html>
+  <html lang="en">
     <head>
       <HeadContent />
     </head>
