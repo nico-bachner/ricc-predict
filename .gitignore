@@ -1,5 +1,8 @@
 # Dependencies
 node_modules/
 
+# Vite
+.output/
+
 # TanStack Start & TanStack Router
 src/routeTree.gen.ts
